@@ -1,0 +1,23 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - /data/*
+
+#queue.mem:
+#  events: 1000
+#  flush.min_events: 125
+
+output:
+  logstash:
+    hosts: [ "logstash:5044" ]
+
+    #worker: 1
+    #loadbalance: true
+    #ttl: 60s
+
+    pipelining: 0
+
+    #timeout: 60
+
+    bulk_max_size: 125
+    #slow_start: true
