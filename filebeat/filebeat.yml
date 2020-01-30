@@ -19,5 +19,5 @@ output:
 
     #timeout: 60
 
-    bulk_max_size: 125
+    #bulk_max_size: 125
     #slow_start: true
